@@ -1,0 +1,148 @@
+{
+	"info": {
+		"_postman_id": "dc722b9f-443d-42ac-9b9f-91d1e952f3d1",
+		"name": "Chat_app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31231557"
+	},
+	"item": [
+		{
+			"name": "Search",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer sDmBkVv7vsvwwwh0vbTVYFX8YYMflQ4Ri5k2Z328",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8001/api/search/?q=t",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"search",
+						""
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "t"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "send_message",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer XpP7XqxkdLMXfTcwO984Yadbbl827uB3XHNW2l37",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sender_email\": \"17prateek12@gmail.comm\",\r\n    \"sender_model\": \"JobSeeker\",\r\n    \"recipient_email\": \"jiit2000@gmail.com\",\r\n    \"recipient_model\": \"UniversityInCharge\",\r\n    \"subject\": \"Inquiry\",\r\n    \"content\": \"how your aare doing.\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/send_message/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"send_message",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sendmessage2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer q6ZIhQL7RUPGvG0jea6w2QnCdjmHTCK3VCMcElVR",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sender_email\": \"tcs@gmail.com\",\r\n    \"sender_model\": \"CompanyInCharge\",\r\n    \"recipient_email\": \"17prateek12@gmail.comm\",\r\n    \"recipient_model\": \"JobSeeker\",\r\n    \"subject\": \"Inquiry\",\r\n    \"content\": \"Hii we impressed with your profile and qualifcation and want to offer you job of 60 lpa.\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/send_message/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"send_message",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_message",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "inbox",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

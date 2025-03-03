@@ -1,0 +1,2217 @@
+{
+	"info": {
+		"_postman_id": "df88c02a-3151-4cb0-b7ba-71bae2163905",
+		"name": "Collegecue Filters",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31231557"
+	},
+	"item": [
+		{
+			"name": "top_universities (work for iit end point)",
+			"item": [
+				{
+					"name": "courses_course_name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://filter.collegecue.com/api/top_universities/courses?page_size=100&page=15",
+							"protocol": "https",
+							"host": [
+								"filter",
+								"collegecue",
+								"com"
+							],
+							"path": [
+								"api",
+								"top_universities",
+								"courses"
+							],
+							"query": [
+								{
+									"key": "course_name",
+									"value": "CS",
+									"disabled": true
+								},
+								{
+									"key": "page_size",
+									"value": "100"
+								},
+								{
+									"key": "page",
+									"value": "15"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "courses_course",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Top}}/api/top_universities/courses?course=bsc",
+							"host": [
+								"{{Top}}"
+							],
+							"path": [
+								"api",
+								"top_universities",
+								"courses"
+							],
+							"query": [
+								{
+									"key": "course",
+									"value": "bsc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "courses_course_duration",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Top}}/api/top_universities/courses?course_duration=3 Years",
+							"host": [
+								"{{Top}}"
+							],
+							"path": [
+								"api",
+								"top_universities",
+								"courses"
+							],
+							"query": [
+								{
+									"key": "course_duration",
+									"value": "3 Years"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "courses_course_type",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Top}}/api/top_universities/courses?course_type=full time",
+							"host": [
+								"{{Top}}"
+							],
+							"path": [
+								"api",
+								"top_universities",
+								"courses"
+							],
+							"query": [
+								{
+									"key": "course_type",
+									"value": "full time"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "courses_degree_subject",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Top}}/api/top_universities/courses?degree_subject=engineering",
+							"host": [
+								"{{Top}}"
+							],
+							"path": [
+								"api",
+								"top_universities",
+								"courses"
+							],
+							"query": [
+								{
+									"key": "degree_subject",
+									"value": "engineering"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "courses_degree_type",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Top}}/api/top_universities/courses?degree_type=lateral",
+							"host": [
+								"{{Top}}"
+							],
+							"path": [
+								"api",
+								"top_universities",
+								"courses"
+							],
+							"query": [
+								{
+									"key": "degree_type",
+									"value": "lateral"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "courses_stream",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Top}}/api/top_universities/courses?stream=medical&course=mbbs",
+							"host": [
+								"{{Top}}"
+							],
+							"path": [
+								"api",
+								"top_universities",
+								"courses"
+							],
+							"query": [
+								{
+									"key": "stream",
+									"value": "medical"
+								},
+								{
+									"key": "course",
+									"value": "mbbs"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "courses_city",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Top}}/api/top_universities/courses?city=delhi",
+							"host": [
+								"{{Top}}"
+							],
+							"path": [
+								"api",
+								"top_universities",
+								"courses"
+							],
+							"query": [
+								{
+									"key": "city",
+									"value": "delhi"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "courses_state",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Top}}/api/top_universities/courses?state=maharashtra",
+							"host": [
+								"{{Top}}"
+							],
+							"path": [
+								"api",
+								"top_universities",
+								"courses"
+							],
+							"query": [
+								{
+									"key": "state",
+									"value": "maharashtra"
+								},
+								{
+									"key": "rating",
+									"value": "8",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "courses_rating",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Top}}/api/top_universities/courses?rating=7&rating=7.5",
+							"host": [
+								"{{Top}}"
+							],
+							"path": [
+								"api",
+								"top_universities",
+								"courses"
+							],
+							"query": [
+								{
+									"key": "rating",
+									"value": "7"
+								},
+								{
+									"key": "rating",
+									"value": "7.5"
+								},
+								{
+									"key": "college_approval",
+									"value": "aicte",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "courses_college_approval",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Top}}/api/top_universities/courses?college_approval=AICTE",
+							"host": [
+								"{{Top}}"
+							],
+							"path": [
+								"api",
+								"top_universities",
+								"courses"
+							],
+							"query": [
+								{
+									"key": "college_approval",
+									"value": "AICTE"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "courses_type(IIT, IIIT, IIM, NIT)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Top}}/api/top_universities/university/courses?university_type=iit&course=mba",
+							"host": [
+								"{{Top}}"
+							],
+							"path": [
+								"api",
+								"top_universities",
+								"university",
+								"courses"
+							],
+							"query": [
+								{
+									"key": "course_duration",
+									"value": "2 Years",
+									"disabled": true
+								},
+								{
+									"key": "university_type",
+									"value": "iit"
+								},
+								{
+									"key": "course",
+									"value": "mba"
+								},
+								{
+									"key": "state",
+									"value": "Bihar",
+									"disabled": true
+								},
+								{
+									"key": "rating",
+									"value": "6",
+									"disabled": true
+								},
+								{
+									"key": "rating",
+									"value": "8",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "courses_college_type",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/top_universities/courses?college_type=Private",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"top_universities",
+								"courses"
+							],
+							"query": [
+								{
+									"key": "university_type",
+									"value": "nit",
+									"disabled": true
+								},
+								{
+									"key": "college_type",
+									"value": "Private"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "colleges_type(IIT,NIT,IIM,IIIT)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/top_universities/university/colleges?university_type=nit&rating=5",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"top_universities",
+								"university",
+								"colleges"
+							],
+							"query": [
+								{
+									"key": "university_type",
+									"value": "nit"
+								},
+								{
+									"key": "state",
+									"value": "Mumbai",
+									"disabled": true
+								},
+								{
+									"key": "rating",
+									"value": "5"
+								},
+								{
+									"key": "rating",
+									"value": "7",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "colleges_rating",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/top_universities/colleges?rating=5&rating=6",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"top_universities",
+								"colleges"
+							],
+							"query": [
+								{
+									"key": "rating",
+									"value": "5"
+								},
+								{
+									"key": "rating",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "colleges_approval_type",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/top_universities/colleges?college_approval=aicte&rating=6&rating=8",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"top_universities",
+								"colleges"
+							],
+							"query": [
+								{
+									"key": "college_approval",
+									"value": "aicte"
+								},
+								{
+									"key": "rating",
+									"value": "6"
+								},
+								{
+									"key": "rating",
+									"value": "8"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "colleges_college_city",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://filter.collegecue.com/api/top_universities/colleges?city=Hyderabad",
+							"protocol": "https",
+							"host": [
+								"filter",
+								"collegecue",
+								"com"
+							],
+							"path": [
+								"api",
+								"top_universities",
+								"colleges"
+							],
+							"query": [
+								{
+									"key": "city",
+									"value": "Hyderabad"
+								},
+								{
+									"key": "rating",
+									"value": "6",
+									"disabled": true
+								},
+								{
+									"key": "rating",
+									"value": "8",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "colleges_state",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/top_universities/colleges?college_type=government&college_rating=8&state=uttar pradesh",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"top_universities",
+								"colleges"
+							],
+							"query": [
+								{
+									"key": "college_type",
+									"value": "government"
+								},
+								{
+									"key": "college_rating",
+									"value": "8"
+								},
+								{
+									"key": "state",
+									"value": "uttar pradesh"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "colleges_college_type",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/top_universities/colleges?college_type=private&college_rating=8&city=pune",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"top_universities",
+								"colleges"
+							],
+							"query": [
+								{
+									"key": "college_type",
+									"value": "private"
+								},
+								{
+									"key": "college_rating",
+									"value": "8"
+								},
+								{
+									"key": "city",
+									"value": "pune"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "institutes (done)",
+			"item": [
+				{
+					"name": "courses_institute_type",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/institutes/courses?institute_type=Training",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"institutes",
+								"courses"
+							],
+							"query": [
+								{
+									"key": "institute_type",
+									"value": "Training"
+								},
+								{
+									"key": "institute_type",
+									"value": "Coaching",
+									"disabled": true
+								},
+								{
+									"key": "or",
+									"value": "true",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "courses_city",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/institutes/courses?city=Mumbai&city=Patna&fees=10000&fees=20000",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"institutes",
+								"courses"
+							],
+							"query": [
+								{
+									"key": "city",
+									"value": "Mumbai"
+								},
+								{
+									"key": "city",
+									"value": "Patna"
+								},
+								{
+									"key": "fees",
+									"value": "10000"
+								},
+								{
+									"key": "fees",
+									"value": "20000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "courses_rating",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/institutes/courses?rating=7&rating=7.1&fees=15000&fees=20000",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"institutes",
+								"courses"
+							],
+							"query": [
+								{
+									"key": "rating",
+									"value": "7"
+								},
+								{
+									"key": "rating",
+									"value": "7.1"
+								},
+								{
+									"key": "fees",
+									"value": "15000"
+								},
+								{
+									"key": "fees",
+									"value": "20000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "courses_center",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/institutes/courses?institute_center=Hyderabad&institute_center=Mumbai",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"institutes",
+								"courses"
+							],
+							"query": [
+								{
+									"key": "institute_center",
+									"value": "Hyderabad"
+								},
+								{
+									"key": "institute_center",
+									"value": "Mumbai"
+								},
+								{
+									"key": "rating",
+									"value": "8",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "courses_fees",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/institutes/courses?fees=13000&fees=20000&rating=8&rating=9",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"institutes",
+								"courses"
+							],
+							"query": [
+								{
+									"key": "fees",
+									"value": "13000"
+								},
+								{
+									"key": "fees",
+									"value": "20000"
+								},
+								{
+									"key": "rating",
+									"value": "8"
+								},
+								{
+									"key": "rating",
+									"value": "9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "courses_courses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/institutes/courses?courses=Bank",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"institutes",
+								"courses"
+							],
+							"query": [
+								{
+									"key": "fees",
+									"value": "20000",
+									"disabled": true
+								},
+								{
+									"key": "rating",
+									"value": "8",
+									"disabled": true
+								},
+								{
+									"key": "city",
+									"value": "kota",
+									"disabled": true
+								},
+								{
+									"key": "courses",
+									"value": "Bank"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "courses_institute_category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/institutes/courses?category=government exam&fees=20000&fees=30000&institute_center=New Delhi",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"institutes",
+								"courses"
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "government exam"
+								},
+								{
+									"key": "fees",
+									"value": "20000"
+								},
+								{
+									"key": "fees",
+									"value": "30000"
+								},
+								{
+									"key": "institute_center",
+									"value": "New Delhi"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "courses_course_duration",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/institutes/courses?course_duration=1 Year&fees=20000&fees=30000&institute_center=New Delhi&rating=6&rating=8",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"institutes",
+								"courses"
+							],
+							"query": [
+								{
+									"key": "course_duration",
+									"value": "1 Year"
+								},
+								{
+									"key": "fees",
+									"value": "20000"
+								},
+								{
+									"key": "fees",
+									"value": "30000"
+								},
+								{
+									"key": "institute_center",
+									"value": "New Delhi"
+								},
+								{
+									"key": "rating",
+									"value": "6"
+								},
+								{
+									"key": "rating",
+									"value": "8"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "courses_program_type",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/institutes/courses?institute_center=New Delhi&institute_center=mumbai&program_type=Regular Classroom Programs",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"institutes",
+								"courses"
+							],
+							"query": [
+								{
+									"key": "fees",
+									"value": "30000",
+									"disabled": true
+								},
+								{
+									"key": "institute_center",
+									"value": "New Delhi"
+								},
+								{
+									"key": "institute_center",
+									"value": "mumbai"
+								},
+								{
+									"key": "or",
+									"value": "true",
+									"disabled": true
+								},
+								{
+									"key": "program_type",
+									"value": "Online Learning Programs",
+									"disabled": true
+								},
+								{
+									"key": "program_type",
+									"value": "Regular Classroom Programs"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "institute_institute_type",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/institutes/institutes?institute_type=training",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"institutes",
+								"institutes"
+							],
+							"query": [
+								{
+									"key": "city",
+									"value": "ranchi",
+									"disabled": true
+								},
+								{
+									"key": "institute_type",
+									"value": "training"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "institute_city",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/institutes/institutes?city=Hyderabad&city=mumbai",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"institutes",
+								"institutes"
+							],
+							"query": [
+								{
+									"key": "rating",
+									"value": "7",
+									"disabled": true
+								},
+								{
+									"key": "rating",
+									"value": "8",
+									"disabled": true
+								},
+								{
+									"key": "institute_center",
+									"value": "mumbai",
+									"disabled": true
+								},
+								{
+									"key": "city",
+									"value": "Hyderabad"
+								},
+								{
+									"key": "city",
+									"value": "mumbai"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "institute_rating",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/institutes/institutes?institute_center=New Delhi",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"institutes",
+								"institutes"
+							],
+							"query": [
+								{
+									"key": "fees",
+									"value": "30000",
+									"disabled": true
+								},
+								{
+									"key": "institute_center",
+									"value": "New Delhi"
+								},
+								{
+									"key": "rating",
+									"value": "5",
+									"disabled": true
+								},
+								{
+									"key": "rating",
+									"value": "6",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "institute_institute_center",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/institutes/institutes?rating=7&institute_center=New Delhi&rating=8",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"institutes",
+								"institutes"
+							],
+							"query": [
+								{
+									"key": "rating",
+									"value": "7"
+								},
+								{
+									"key": "institute_center",
+									"value": "New Delhi"
+								},
+								{
+									"key": "rating",
+									"value": "8"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "study_abroad (done)",
+			"item": [
+				{
+					"name": "courses_country and city",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/study_abroad/courses?country=usa&city=new york",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"study_abroad",
+								"courses"
+							],
+							"query": [
+								{
+									"key": "country",
+									"value": "usa"
+								},
+								{
+									"key": "city",
+									"value": "new york"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "courses_region",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/study_abroad/courses?region=england&region=victoria&or=true",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"study_abroad",
+								"courses"
+							],
+							"query": [
+								{
+									"key": "region",
+									"value": "england"
+								},
+								{
+									"key": "region",
+									"value": "victoria"
+								},
+								{
+									"key": "or",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "courses_rating",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/study_abroad/courses?rating=5&rating=5.5",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"study_abroad",
+								"courses"
+							],
+							"query": [
+								{
+									"key": "rating",
+									"value": "5"
+								},
+								{
+									"key": "rating",
+									"value": "5.5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "courses_course",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/study_abroad/courses?courses=master&courses=bachelor&or=true",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"study_abroad",
+								"courses"
+							],
+							"query": [
+								{
+									"key": "courses",
+									"value": "master"
+								},
+								{
+									"key": "country",
+									"value": "usa",
+									"disabled": true
+								},
+								{
+									"key": "city",
+									"value": "new york",
+									"disabled": true
+								},
+								{
+									"key": "courses",
+									"value": "bachelor"
+								},
+								{
+									"key": "or",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "courses_course duration",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/study_abroad/courses?course_duration=4 years&course_duration=2 years&or=true",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"study_abroad",
+								"courses"
+							],
+							"query": [
+								{
+									"key": "country",
+									"value": "germany",
+									"disabled": true
+								},
+								{
+									"key": "fees",
+									"value": "13",
+									"disabled": true
+								},
+								{
+									"key": "fees",
+									"value": "20",
+									"disabled": true
+								},
+								{
+									"key": "course_duration",
+									"value": "4 years"
+								},
+								{
+									"key": "course_duration",
+									"value": "2 years"
+								},
+								{
+									"key": "or",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "courses_mode",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/study_abroad/courses?mode=on+campus&mode=online",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"study_abroad",
+								"courses"
+							],
+							"query": [
+								{
+									"key": "mode",
+									"value": "on+campus"
+								},
+								{
+									"key": "mode",
+									"value": "online"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "courses_language",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/study_abroad/courses?language=french&language=german",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"study_abroad",
+								"courses"
+							],
+							"query": [
+								{
+									"key": "language",
+									"value": "french"
+								},
+								{
+									"key": "language",
+									"value": "german"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "courses_program type",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/study_abroad/courses?program_type=full time&city=new york city&country=usa&fees=12&fees=20",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"study_abroad",
+								"courses"
+							],
+							"query": [
+								{
+									"key": "program_type",
+									"value": "full time"
+								},
+								{
+									"key": "city",
+									"value": "new york city"
+								},
+								{
+									"key": "country",
+									"value": "usa"
+								},
+								{
+									"key": "fees",
+									"value": "12"
+								},
+								{
+									"key": "fees",
+									"value": "20"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "courses_course_fees",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/study_abroad/courses?fees=10&fees=15&country=usa&city=dayton",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"study_abroad",
+								"courses"
+							],
+							"query": [
+								{
+									"key": "fees",
+									"value": "10"
+								},
+								{
+									"key": "fees",
+									"value": "15"
+								},
+								{
+									"key": "country",
+									"value": "usa"
+								},
+								{
+									"key": "city",
+									"value": "dayton"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "colleges_country_city",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/study_abroad/colleges?city=stockholm&country=sweden",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"study_abroad",
+								"colleges"
+							],
+							"query": [
+								{
+									"key": "city",
+									"value": "stockholm"
+								},
+								{
+									"key": "country",
+									"value": "sweden"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "colleges_region",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/study_abroad/colleges?region=victoria&rating=6&rating=8",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"study_abroad",
+								"colleges"
+							],
+							"query": [
+								{
+									"key": "region",
+									"value": "victoria"
+								},
+								{
+									"key": "rating",
+									"value": "6"
+								},
+								{
+									"key": "rating",
+									"value": "8"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "colleges_rating",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/study_abroad/colleges?rating=8&rating=8.2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"study_abroad",
+								"colleges"
+							],
+							"query": [
+								{
+									"key": "rating",
+									"value": "8"
+								},
+								{
+									"key": "rating",
+									"value": "8.2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "study_abroad_v2",
+			"item": [
+				{
+					"name": "colleges_country_city(done till now)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8001/api/study_abroad_v2/colleges?country=United States",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"study_abroad_v2",
+								"colleges"
+							],
+							"query": [
+								{
+									"key": "country",
+									"value": "United States"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "courses_course_subject(done till now)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://filter.collegecue.com/api/study_abroad_v2/courses?subject=Computer Science and Information Systems",
+							"protocol": "https",
+							"host": [
+								"filter",
+								"collegecue",
+								"com"
+							],
+							"path": [
+								"api",
+								"study_abroad_v2",
+								"courses"
+							],
+							"query": [
+								{
+									"key": "subject",
+									"value": "Biological Sciences",
+									"disabled": true
+								},
+								{
+									"key": "subject",
+									"value": "mathematics",
+									"disabled": true
+								},
+								{
+									"key": "subject",
+									"value": "Computer Science and Information Systems"
+								},
+								{
+									"key": "subject",
+									"value": "Business and Management Studies",
+									"disabled": true
+								},
+								{
+									"key": "subject",
+									"value": "Finance",
+									"disabled": true
+								},
+								{
+									"key": "subject",
+									"value": "Performing Arts",
+									"disabled": true
+								},
+								{
+									"key": "subject",
+									"value": "English Language and Literature",
+									"disabled": true
+								},
+								{
+									"key": "subject",
+									"value": "History",
+									"disabled": true
+								},
+								{
+									"key": "subject",
+									"value": "Anthropology",
+									"disabled": true
+								},
+								{
+									"key": "subject",
+									"value": "Biological Sciences",
+									"disabled": true
+								},
+								{
+									"key": "subject",
+									"value": "Sustainable Development",
+									"disabled": true
+								},
+								{
+									"key": "subject",
+									"value": "Library and Information Management",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "courses_course_duration(done till now)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/study_abroad_v2/courses?duration=2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"study_abroad_v2",
+								"courses"
+							],
+							"query": [
+								{
+									"key": "duration",
+									"value": "6",
+									"disabled": true
+								},
+								{
+									"key": "duration",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "courses_degree_name(done till now)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/study_abroad_v2/courses?degree_name=MArch",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"study_abroad_v2",
+								"courses"
+							],
+							"query": [
+								{
+									"key": "degree_name",
+									"value": "MArch"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "courses_degree_type(done till now)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/study_abroad_v2/courses?degree_type=Phd",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"study_abroad_v2",
+								"courses"
+							],
+							"query": [
+								{
+									"key": "degree_type",
+									"value": "Phd"
+								},
+								{
+									"key": "degree_type",
+									"value": "Masters",
+									"disabled": true
+								},
+								{
+									"key": "degree_type",
+									"value": "Bachelors",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "courses_broad_subject_area(done till now)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/study_abroad_v2/courses?subject=Politics&degree_type=Phd",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"study_abroad_v2",
+								"courses"
+							],
+							"query": [
+								{
+									"key": "subject",
+									"value": "Politics"
+								},
+								{
+									"key": "degree_type",
+									"value": "Phd"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "courses_course_type(done till now)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/study_abroad_v2/courses?course_type=Full Time",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"study_abroad_v2",
+								"courses"
+							],
+							"query": [
+								{
+									"key": "course_type",
+									"value": "Part Time",
+									"disabled": true
+								},
+								{
+									"key": "course_type",
+									"value": "Full Time"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "courses_study_mode(done till now)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/study_abroad_v2/courses?mode=On Campus",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"study_abroad_v2",
+								"courses"
+							],
+							"query": [
+								{
+									"key": "mode",
+									"value": "On Campus"
+								},
+								{
+									"key": "mode",
+									"value": "Blended",
+									"disabled": true
+								},
+								{
+									"key": "mode",
+									"value": "Online",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "courses_course_name(done till now)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/study_abroad_v2/courses?course_name=finance&degree_type=Phd",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"study_abroad_v2",
+								"courses"
+							],
+							"query": [
+								{
+									"key": "course_name",
+									"value": "finance"
+								},
+								{
+									"key": "degree_type",
+									"value": "Phd"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "courses_course_scholarship_available(done till now)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/study_abroad_v2/courses?scholarship=true",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"study_abroad_v2",
+								"courses"
+							],
+							"query": [
+								{
+									"key": "scholarship",
+									"value": "true"
+								},
+								{
+									"key": "scholarship",
+									"value": "false",
+									"disabled": true
+								},
+								{
+									"key": "course_name",
+									"value": "physics",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "courses_course_application_deadline(done till now)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/study_abroad_v2/courses?application_deadline=2023-07&course_name=finance",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"study_abroad_v2",
+								"courses"
+							],
+							"query": [
+								{
+									"key": "application_deadline",
+									"value": "2023-07"
+								},
+								{
+									"key": "course_name",
+									"value": "finance"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "courses_course_fees(done till now)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/study_abroad_v2/courses?country=United Kingdom&city=London&degree_type=Masters&subject=finance",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"study_abroad_v2",
+								"courses"
+							],
+							"query": [
+								{
+									"key": "fees",
+									"value": "60000",
+									"disabled": true
+								},
+								{
+									"key": "fees",
+									"value": "70000",
+									"disabled": true
+								},
+								{
+									"key": "country",
+									"value": "United Kingdom"
+								},
+								{
+									"key": "city",
+									"value": "London"
+								},
+								{
+									"key": "degree_type",
+									"value": "Masters"
+								},
+								{
+									"key": "subject",
+									"value": "finance"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "courses_country_city(done till now)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/study_abroad_v2/courses?country=United Kingdom&city=London&degree_type=Masters",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"study_abroad_v2",
+								"courses"
+							],
+							"query": [
+								{
+									"key": "fees",
+									"value": "60000",
+									"disabled": true
+								},
+								{
+									"key": "fees",
+									"value": "70000",
+									"disabled": true
+								},
+								{
+									"key": "country",
+									"value": "United Kingdom"
+								},
+								{
+									"key": "city",
+									"value": "London"
+								},
+								{
+									"key": "degree_type",
+									"value": "Masters"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

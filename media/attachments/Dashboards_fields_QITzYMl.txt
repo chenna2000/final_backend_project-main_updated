@@ -1,0 +1,71 @@
+1) For Student and Jobseeker Dashboard ->
+
+first_name = [Required]
+last_name = [Required]
+email = [Required]
+phone =  [Required]
+address = [Required]
+date_of_birth =  [Required]
+website_urls = atleast 1 [Required]
+skills =  [Required]
+activities
+interests
+languages
+bio
+city = [Required]
+state = [Required]
+country = [Required]
+zipcode = [Required]
+Attachment = [Required]
+delete = [Required]
+objective 
+education = [ course_or_degree, school_or_university, grade_or_cgpa, start_date, end_date, description ] = [Required]
+experience = [ job_title, company_name, start_date, end_date, description ] 
+projects   = [ title, description, project_link ]
+references = [ name, contact_info, relationship ]
+certifications = [ name,start_date, end_date ]
+achievements = [ title, publisher, start_date, end_date ] 
+publications = [ title, publisher, start_date, end_date ]
+
+
+2) For Compnay Dashboard ->
+
+name
+email
+phone
+address
+city
+state
+country
+zipcode
+website
+website_urls
+about_company
+sector_type
+category
+established_date
+employee_size - [Optional]
+Attachment
+is_deleted
+
+
+3) For College Dashboard ->
+
+college_name
+email
+website
+phone
+founded_date
+university_type 
+about_college
+website_urls
+address
+city
+state
+country
+zipcode
+Attachment
+is_deleted
+
+
+

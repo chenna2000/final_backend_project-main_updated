@@ -1,0 +1,1468 @@
+{
+	"info": {
+		"_postman_id": "fae074c8-3e12-4873-bd07-fcd56d5505a6",
+		"name": "Candidate and Student Api End Points",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31231557"
+	},
+	"item": [
+		{
+			"name": "CREATE STUDENT RESUME",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 2EWy4cL7iq7nsZU4OeQ3O8FIMTVJyX5ICwWNYHOe",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "first_name",
+							"value": "Vaishnavi",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "Patil",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "vaishnavi10@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "+123456789",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "123 Main St, Anytown, USA",
+							"type": "text"
+						},
+						{
+							"key": "date_of_birth",
+							"value": "1990-01-01",
+							"type": "text"
+						},
+						{
+							"key": "website_urls",
+							"value": "[\"https://linkedin.com/in/johndoe\", \"https://github.com/johndoe\"]",
+							"type": "text"
+						},
+						{
+							"key": "skills",
+							"value": "Python, Django, JavaScript",
+							"type": "text"
+						},
+						{
+							"key": "activities",
+							"value": "Volunteer at local community center",
+							"type": "text"
+						},
+						{
+							"key": "interests",
+							"value": "Reading, Hiking",
+							"type": "text"
+						},
+						{
+							"key": "languages",
+							"value": "English, Spanish",
+							"type": "text"
+						},
+						{
+							"key": "bio",
+							"value": "I am a software developer with over 5 years of experience in full-stack development. I specialize in building scalable web applications using Django, React, and PostgreSQL. Passionate about solving complex problems and delivering high-quality code, I am currently focused on backend development and API design",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "Mumbai",
+							"type": "text"
+						},
+						{
+							"key": "state",
+							"value": "Maharashtra",
+							"type": "text"
+						},
+						{
+							"key": "country",
+							"value": "India",
+							"type": "text"
+						},
+						{
+							"key": "zipcode",
+							"value": "416102",
+							"type": "text"
+						},
+						{
+							"key": "Attachment",
+							"type": "file",
+							"src": "/C:/Users/HP/Downloads/20240923_135405.jpg"
+						},
+						{
+							"key": "delete",
+							"value": "false",
+							"type": "text"
+						},
+						{
+							"key": "objective",
+							"value": "{\"text\": \"To leverage my skills and experience in a challenging role.\"}",
+							"type": "text"
+						},
+						{
+							"key": "education",
+							"value": "[{ \"course_or_degree\": \"BSc Computer Science\", \"school_or_university\": \"University of Example\", \"grade_or_cgpa\": \"3.8\",\"start_date\": \"2010-09-01\",\"end_date\": \"2012-06-30\", \"description\" : \"Developed web applications using Django.\"}]",
+							"type": "text"
+						},
+						{
+							"key": "experience",
+							"value": "[{\"job_title\": \"Software Tester\",\"company_name\": \"Tech Company\",\"start_date\": \"2015-06-01\",\"end_date\": \"2020-12-31\",\"description\": \"Developed web applications using Django.\" }]",
+							"type": "text"
+						},
+						{
+							"key": "projects",
+							"value": "[{\"title\": \"E-commerce Platform\", \"description\": \"Developed a scalable e-commerce platform.\", \"project_link\": \"https://github.com/johndoe/ecommerce\"}]\n",
+							"type": "text"
+						},
+						{
+							"key": "references",
+							"value": "[{ \"name\": \"Jane Smith\", \"contact_info\": \"jane.smith@example.com\", \"relationship\": \"Former Manager\" }]",
+							"type": "text"
+						},
+						{
+							"key": "certifications",
+							"value": "[{ \"name\": \"Jane Smith\", \"start_date\": \"2016-06-01\", \"end_date\": \"2016-09-01\" }]",
+							"type": "text"
+						},
+						{
+							"key": "achievements",
+							"value": "[{\"title\": \"Top Performer Award\", \"publisher\": \"Tech Corp\", \"start_date\": \"2020-01-01\", \"end_date\": \"2020-12-01\"}]",
+							"type": "text"
+						},
+						{
+							"key": "publications",
+							"value": "[{\"title\": \"AI in Health\", \"publisher\": \"AI Journal\", \"start_date\": \"2021-01-01\", \"end_date\": \"2021-06-01\"}]",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/create_resume/4/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"create_resume",
+						"4",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET STUDENT RESUME BY ID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer ByDPurS5HXkful1uEHcsjcVf11WBz88krqG97sRj",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/resume/3/5/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"resume",
+						"3",
+						"5",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "USER_APPLICATION_STATUS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer kN5aafJ4EYiEa2z6gsUEOpQraLKWvqgjxgpmjUPo",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/user-application-status-counts/1/?email=kuranemayuresh10@gmail.com",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"user-application-status-counts",
+						"1",
+						""
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "kuranemayuresh10@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "USER APPILED_JOB_STATUS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer WZNTe9ctqPX9j6ex05fwnkQ0as7qQbtQA7mo6k8Z",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/fetch-user-applied-jobs/1/?email=kuranemayuresh10@gmail.com&status=interview_scheduled&job_type=Full_Time&sort_by=job_title_asc&job_title=Software Developer",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"fetch-user-applied-jobs",
+						"1",
+						""
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "kuranemayuresh10@gmail.com"
+						},
+						{
+							"key": "status",
+							"value": "interview_scheduled"
+						},
+						{
+							"key": "job_type",
+							"value": "Full_Time"
+						},
+						{
+							"key": "sort_by",
+							"value": "job_title_asc"
+						},
+						{
+							"key": "job_title",
+							"value": "Software Developer"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FETCH JOBS BY NEW_USER SKILLS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer kN5aafJ4EYiEa2z6gsUEOpQraLKWvqgjxgpmjUPo",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/fetch-user-skills-jobs/1/?sort_order=latest",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"fetch-user-skills-jobs",
+						"1",
+						""
+					],
+					"query": [
+						{
+							"key": "student_id",
+							"value": "4",
+							"disabled": true
+						},
+						{
+							"key": "sort_order",
+							"value": "latest"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "STUDENT APPLY FOR JOB",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-CSRFToken",
+						"value": "xVsGjj597LYxN2M64AtrwQ8S4fcYlJBqUCCsYcmmIUoHSMZtwB24bESgT0SvspjN",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer kN5aafJ4EYiEa2z6gsUEOpQraLKWvqgjxgpmjUPo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "\"job\"",
+							"value": " 10",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "\"candidate_name\"",
+							"value": " \"poorvi\"",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "\"email\"",
+							"value": " \"peddarapuc@gmail.com\"",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "\"phone_number\"",
+							"value": " \"123-456-7890\"",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "\"cover_letter\"",
+							"value": " \"I am excited to apply for this position...\"",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "\"status\"",
+							"value": " \"pending\"",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "\"skills\"",
+							"value": " \"java, c\"",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "resume",
+							"type": "file",
+							"src": "/C:/Users/HP/Downloads/views (2).py",
+							"disabled": true
+						},
+						{
+							"key": "data",
+							"value": "{   \"job\": 10, \"first_name\": \"mayuresh\", \"last_name\" : \"Kurane\", \"email\":\"kuranemayuresh10@gmail.com\",\"phone_number\":\"123-456-7890\",\"cover_letter\": \"I am excited to apply for this position...\",\n \"status\": \"pending\", \"skills\": \"html, java\" ,\"bio\":\"Full-stack developer with a passion for building scalable software solutions\", \"education\":\"B-Tech at IIT kanpur\", \"experience\":\"TechCorp - Software Engineer (2017-2020)\"}",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "X-CSRFToken",
+							"value": "zVW7irl3NziSOYbkVd5q5hjQ5YOOCa1yWC6TXkCgoII2TIoHneE3K53eUJulJQJV",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/user-apply-job/3/1/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"user-apply-job",
+						"3",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE JOBSEEKER RESUME",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer JicLzkU53mfTJPtbMDlJscS6gkGgIw06h6mGl5uP",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "first_name",
+							"value": "Pravin",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "Patil",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "pravinpatil@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "+123456789",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "123 Main St, Anytown, USA",
+							"type": "text"
+						},
+						{
+							"key": "date_of_birth",
+							"value": "1990-01-01",
+							"type": "text"
+						},
+						{
+							"key": "website_urls",
+							"value": "[\"https://linkedin.com/in/johndoe\", \"https://github.com/johndoe\"]",
+							"type": "text"
+						},
+						{
+							"key": "skills",
+							"value": "Python, Django, JavaScript",
+							"type": "text"
+						},
+						{
+							"key": "activities",
+							"value": "Volunteer at local community center",
+							"type": "text"
+						},
+						{
+							"key": "interests",
+							"value": "Reading, Hiking",
+							"type": "text"
+						},
+						{
+							"key": "languages",
+							"value": "English, Spanish",
+							"type": "text"
+						},
+						{
+							"key": "bio",
+							"value": "I am a software developer with over 5 years of experience in full-stack development. I specialize in building scalable web applications using Django, React, and PostgreSQL. Passionate about solving complex problems and delivering high-quality code, I am currently focused on backend development and API design",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "Mumbai",
+							"type": "text"
+						},
+						{
+							"key": "state",
+							"value": "Maharashtra",
+							"type": "text"
+						},
+						{
+							"key": "country",
+							"value": "India",
+							"type": "text"
+						},
+						{
+							"key": "zipcode",
+							"value": "416102",
+							"type": "text"
+						},
+						{
+							"key": "Attachment",
+							"type": "file",
+							"src": "/C:/Users/HP/Downloads/fetch_applications.txt"
+						},
+						{
+							"key": "delete",
+							"value": "false",
+							"type": "text"
+						},
+						{
+							"key": "objective",
+							"value": "{\"text\": \"To leverage my skills and experience in a challenging role.\"}",
+							"type": "text"
+						},
+						{
+							"key": "education",
+							"value": "[{ \"course_or_degree\": \"BBA\", \"school_or_university\": \"University of Example\", \"grade_or_cgpa\": \"3.8\",\"start_date\": \"2010-09-01\",\"end_date\": \"2012-06-30\", \"description\" : \"Developed web applications using Django.\"}]",
+							"type": "text"
+						},
+						{
+							"key": "experience",
+							"value": "[{\"job_title\": \"Backend Developer\",\"company_name\": \"Tech Company\",\"start_date\": \"2015-06-01\",\"end_date\": \"2020-12-31\",\"description\": \"Developed web applications using Django.\" }]",
+							"type": "text"
+						},
+						{
+							"key": "projects",
+							"value": "[{\"title\": \"E-commerce Platform\", \"description\": \"Developed a scalable e-commerce platform.\", \"project_link\": \"https://github.com/johndoe/ecommerce\"}]\n",
+							"type": "text"
+						},
+						{
+							"key": "references",
+							"value": "[{ \"name\": \"Jane Smith\", \"contact_info\": \"jane.smith@example.com\", \"relationship\": \"Former Manager\" }]",
+							"type": "text"
+						},
+						{
+							"key": "certifications",
+							"value": "[{ \"name\": \"Jane Smith\", \"start_date\": \"2016-06-01\", \"end_date\": \"2016-09-01\" }]",
+							"type": "text"
+						},
+						{
+							"key": "achievements",
+							"value": "[{\"title\": \"Top Performer Award\", \"publisher\": \"Tech Corp\", \"start_date\": \"2020-01-01\", \"end_date\": \"2020-12-01\"}]",
+							"type": "text"
+						},
+						{
+							"key": "publications",
+							"value": "[{\"title\": \"AI in Healthcare\", \"publisher\": \"AI Journal\", \"start_date\": \"2021-01-01\", \"end_date\": \"2021-06-01\"}]",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/create-jobseeker-resume/1/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"create-jobseeker-resume",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET JOBSEEKER RESUME BY ID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer JicLzkU53mfTJPtbMDlJscS6gkGgIw06h6mGl5uP",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/jobseeker_resume/1/2/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"jobseeker_resume",
+						"1",
+						"2",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "JOBSEEKER APPLICATION STATUS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer JicLzkU53mfTJPtbMDlJscS6gkGgIw06h6mGl5uP",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/jobseeker-application-status-counts/1/?email=pravinpatil@gmail.com",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"jobseeker-application-status-counts",
+						"1",
+						""
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "pravinpatil@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "JOBSEEKER APPILED_JOB_STATUS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer znmfhzYK5abU0ybnhgDe1MPfasGEgGONLhfcvfFM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/fetch-jobseeker-applied-jobs/1/?email=chennakesavarao95@gmail.com&status=rejected&job_type=Full_Time&sort_by=job_title_asc&job_title=Frontend Developer",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"fetch-jobseeker-applied-jobs",
+						"1",
+						""
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "chennakesavarao95@gmail.com"
+						},
+						{
+							"key": "status",
+							"value": "rejected"
+						},
+						{
+							"key": "job_type",
+							"value": "Full_Time"
+						},
+						{
+							"key": "sort_by",
+							"value": "job_title_asc"
+						},
+						{
+							"key": "job_title",
+							"value": "Frontend Developer"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FETCH JOBS BY JOBSEEKER SKILLS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer q1ophqJzunGKSmZOjHQlfzyDjU6rXKGXcdvlevgq",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/fetch-jobs/1/?sort_order=latest",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"fetch-jobs",
+						"1",
+						""
+					],
+					"query": [
+						{
+							"key": "student_id",
+							"value": "4",
+							"disabled": true
+						},
+						{
+							"key": "sort_order",
+							"value": "latest"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "JOBSEEKER APPLY FOR JOB",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-CSRFToken",
+						"value": "xVsGjj597LYxN2M64AtrwQ8S4fcYlJBqUCCsYcmmIUoHSMZtwB24bESgT0SvspjN",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer q1ophqJzunGKSmZOjHQlfzyDjU6rXKGXcdvlevgq",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "\"job\"",
+							"value": " 10",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "\"candidate_name\"",
+							"value": " \"poorvi\"",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "\"email\"",
+							"value": " \"peddarapuc@gmail.com\"",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "\"phone_number\"",
+							"value": " \"123-456-7890\"",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "\"cover_letter\"",
+							"value": " \"I am excited to apply for this position...\"",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "\"status\"",
+							"value": " \"pending\"",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "\"skills\"",
+							"value": " \"java, c\"",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "resume",
+							"type": "file",
+							"src": "/C:/Users/HP/Downloads/Job Portal Api End Points.postman_collection(MK)",
+							"disabled": true
+						},
+						{
+							"key": "data",
+							"value": "{   \"job\": 10, \"first_name\": \"mayuresh\", \"last_name\" : \"Kurane\", \"email\":\"pravinpatil@gmail.com\",\"phone_number\":\"123-456-7890\",\"cover_letter\": \"I am excited to apply for this position...\",\n \"status\": \"pending\", \"skills\": \"html, java\" ,\"bio\":\"Full-stack developer with a passion for building scalable software solutions\", \"education\":\"B-Tech at IIT kanpur\", \"experience\":\"TechCorp - Software Engineer (2017-2020)\"}",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "X-CSRFToken",
+							"value": "zVW7irl3NziSOYbkVd5q5hjQ5YOOCa1yWC6TXkCgoII2TIoHneE3K53eUJulJQJV",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/jobseeker-apply-job/2052060973046028/1/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"jobseeker-apply-job",
+						"2052060973046028",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SUBMIT STUDENT ENQUIRY FOR COLLEGE",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer kN5aafJ4EYiEa2z6gsUEOpQraLKWvqgjxgpmjUPo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"first_name\":\"Mayuresh\",\r\n   \"last_name\":\"kurane\",\r\n   \"email\":\"kuranemayuresh10@gmail.com\",\r\n   \"mobile_number\":\"9877664532\",\r\n   \"course\": \"B-Tech in CSE\",\r\n   \"status\":\"not-replied\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/submit-college-enquiry/1/2/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"submit-college-enquiry",
+						"1",
+						"2",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FETCH ALL STUDENT ENQUIRIES",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer u4JVjlRAp2FZELCOUpgvO6ELNGpsqZ9MYCnxYDl0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/get-student-enquiries/2/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"get-student-enquiries",
+						"2",
+						""
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "ankitapawar10@gmail.com",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SEARCH CONTACTS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer kN5aafJ4EYiEa2z6gsUEOpQraLKWvqgjxgpmjUPo",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/search-comp-clg-contacts/?q=m&sender_email=kuranemayuresh10@gmail.com",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"search-comp-clg-contacts",
+						""
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "m"
+						},
+						{
+							"key": "sender_email",
+							"value": "kuranemayuresh10@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SEND MESSAGE",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer gAXc6wWdTxOtZc8vENiOU1Cs9czlwhwVLvEQG7ft",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "sender_email",
+							"value": "kuranemayuresh31@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "recipient_email",
+							"value": "tcs@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "Hi , Company",
+							"type": "text"
+						},
+						{
+							"key": "attachments",
+							"type": "file",
+							"src": "/C:/Users/HP/Downloads/college  m codes"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/send-message-clg-comp/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"send-message-clg-comp",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET MESSAGE",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer kN5aafJ4EYiEa2z6gsUEOpQraLKWvqgjxgpmjUPo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/get-clg-comp-messages/?sender_email=kuranemayuresh10@gmail.com&recipient_email=tcs10@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"get-clg-comp-messages",
+						""
+					],
+					"query": [
+						{
+							"key": "sender_email",
+							"value": "kuranemayuresh10@gmail.com"
+						},
+						{
+							"key": "recipient_email",
+							"value": "tcs10@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "INBOX",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer kN5aafJ4EYiEa2z6gsUEOpQraLKWvqgjxgpmjUPo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/clg-comp-inbox/?email=kuranemayuresh10@gmail.com&filter=all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"clg-comp-inbox",
+						""
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "kuranemayuresh10@gmail.com"
+						},
+						{
+							"key": "filter",
+							"value": "all"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SEARCH JOBSEEKER CONTACTS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer RX3m9gXiNgUKZE1K0t6GwmXFdZRFaMPgMgSukWKh",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/search-comp-clg-contacts-jobseeker/?q=m&sender_email=mayankpatil@gmail.com",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"search-comp-clg-contacts-jobseeker",
+						""
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "m"
+						},
+						{
+							"key": "sender_email",
+							"value": "mayankpatil@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SEND JOBSEEKER MESSAGE",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer jrLhgNMIz7Dh1ABSWt43BW1mZGCkFOU8rxWZLbjv",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "sender_email",
+							"value": "17prateek12@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "recipient_email",
+							"value": "prateeksharma1885@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "Hi prateeksharma1885 its 17prateek12",
+							"type": "text"
+						},
+						{
+							"key": "attachments",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/send-message-clg-comp-jobseeker/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"send-message-clg-comp-jobseeker",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET JOBSEEKER MESSAGE",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer jrLhgNMIz7Dh1ABSWt43BW1mZGCkFOU8rxWZLbjv",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/get-clg-comp-messages-jobseeker/?sender_email=17prateek12@gmail.com&recipient_email=prateeksharma1885@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"get-clg-comp-messages-jobseeker",
+						""
+					],
+					"query": [
+						{
+							"key": "sender_email",
+							"value": "17prateek12@gmail.com"
+						},
+						{
+							"key": "recipient_email",
+							"value": "prateeksharma1885@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "JOBSEEKER INBOX",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 93cbWeS7eKheFB4ZD6cKhznaeu8LhIsmCmGX8T0n",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/clg-comp-inbox-jobseeker/?email=kuranemayuresh77@gmail.com&filter=all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"clg-comp-inbox-jobseeker",
+						""
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "kuranemayuresh77@gmail.com"
+						},
+						{
+							"key": "filter",
+							"value": "all"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET UPCOMING INTERVIEW BY JOB ROLE",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer NiPKwiQEAOC7LkuxZzzEu5iCN9aXlo5TftXkYAIS",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/interviews/upcoming/5/?job_title=Software Developer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"interviews",
+						"upcoming",
+						"5",
+						""
+					],
+					"query": [
+						{
+							"key": "student_email",
+							"value": "ankitapawar10@gmail.com",
+							"disabled": true
+						},
+						{
+							"key": "job_title",
+							"value": "Software Developer"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET PAST INTERVIEW BY JOB ROLE",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer NiPKwiQEAOC7LkuxZzzEu5iCN9aXlo5TftXkYAIS",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/interviews/past/5/?job_title=Software Developer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"interviews",
+						"past",
+						"5",
+						""
+					],
+					"query": [
+						{
+							"key": "student_email",
+							"value": "tejasrathod@gmail.com",
+							"disabled": true
+						},
+						{
+							"key": "job_title",
+							"value": "Software Developer"
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CANDIDATE PROFILE",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-CSRFToken",
+						"value": "xVsGjj597LYxN2M64AtrwQ8S4fcYlJBqUCCsYcmmIUoHSMZtwB24bESgT0SvspjN",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer QpDK8IkRoYHCP5Vk3vCNFW76dOTczHoi0ov7GQL4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "resume",
+							"type": "file",
+							"src": "/C:/Users/HP/Documents/Bharat _Tech/all_commands.txt"
+						},
+						{
+							"key": "data",
+							"value": "{  \"first_name\": \"mayuresh\", \"last_name\": \"kurane\", \"email\": \"kuranemayuresh@gmail.com\", \"phone_number\": \"123456787\", \"date-of-birth\": \"22-09-2004\", \"experience_years\": 2, \"skills\": \"java, html\",\"location\":\"Pune\"\n}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/candidate_profile/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"candidate_profile",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CSRF TOKEN",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/get-csrf-token/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"get-csrf-token",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

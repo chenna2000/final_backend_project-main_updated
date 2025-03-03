@@ -1,0 +1,2655 @@
+{
+	"info": {
+		"_postman_id": "955d326c-aa0b-476f-a724-5c5cd3ce39ac",
+		"name": "College and Company Api End Points",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31231557"
+	},
+	"item": [
+		{
+			"name": "LIST OF COMPANIES",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer QpDK8IkRoYHCP5Vk3vCNFW76dOTczHoi0ov7GQL4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/fetch-companies/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"fetch-companies",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE COMPANIES",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer sPrevhrozypH68QLdfwSEiDFSkxXHqy67OSpyfYu",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Wipro",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "techwipro@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "9856342510",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "Hinjewadi",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "Pune",
+							"type": "text"
+						},
+						{
+							"key": "state",
+							"value": "Maharshtra",
+							"type": "text"
+						},
+						{
+							"key": "country",
+							"value": "India",
+							"type": "text"
+						},
+						{
+							"key": "zipcode",
+							"value": "987654",
+							"type": "text"
+						},
+						{
+							"key": "website",
+							"value": "https://example.com",
+							"type": "text"
+						},
+						{
+							"key": "website_urls",
+							"value": "https://example1.com, https://example2.com, https://example3.com",
+							"type": "text"
+						},
+						{
+							"key": "about_company",
+							"value": "Infosys is a global leader in next-generation digital services and consulting.",
+							"type": "text"
+						},
+						{
+							"key": "sector_type",
+							"value": "Computer programming",
+							"type": "text"
+						},
+						{
+							"key": "category",
+							"value": "Computer programming",
+							"type": "text"
+						},
+						{
+							"key": "established_date",
+							"value": "1978-03-12",
+							"type": "text"
+						},
+						{
+							"key": "employee_size",
+							"value": "50",
+							"type": "text"
+						},
+						{
+							"key": "Attachment",
+							"type": "file",
+							"src": "/C:/Users/HP/Downloads/modified_functionalities.txt"
+						},
+						{
+							"key": "is_deleted",
+							"value": "false",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/companies/2/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"companies",
+						"2",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE COMPANY",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer QpDK8IkRoYHCP5Vk3vCNFW76dOTczHoi0ov7GQL4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Accenture",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "techaccenture@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "9876543213",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "Chembur",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "Mumbai",
+							"type": "text"
+						},
+						{
+							"key": "state",
+							"value": "Maharashtra",
+							"type": "text"
+						},
+						{
+							"key": "country",
+							"value": "India",
+							"type": "text"
+						},
+						{
+							"key": "zipcode",
+							"value": "876534",
+							"type": "text"
+						},
+						{
+							"key": "website",
+							"value": "https://techlti.com",
+							"type": "text"
+						},
+						{
+							"key": "website_urls",
+							"value": "https://techlti.com, https://techlti1.com, https://techlti2.com",
+							"type": "text"
+						},
+						{
+							"key": "about_company",
+							"value": "BharatTech is a global leader in next-generation digital services and consulting.",
+							"type": "text"
+						},
+						{
+							"key": "sector_type",
+							"value": "Office administration",
+							"type": "text"
+						},
+						{
+							"key": "category",
+							"value": "Office administration",
+							"type": "text"
+						},
+						{
+							"key": "established_date",
+							"value": "2002-04-09",
+							"type": "text"
+						},
+						{
+							"key": "employee_size",
+							"value": "100",
+							"type": "text"
+						},
+						{
+							"key": "Attachment",
+							"type": "file",
+							"src": "/C:/Users/HP/Documents/Bharat _Tech/all_commands.txt"
+						},
+						{
+							"key": "is_deleted",
+							"value": "false",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/company/4/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"company",
+						"4",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE COMPANY",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer QpDK8IkRoYHCP5Vk3vCNFW76dOTczHoi0ov7GQL4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/company/4/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"company",
+						"4",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "JOB LISTS",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer QpDK8IkRoYHCP5Vk3vCNFW76dOTczHoi0ov7GQL4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/jobs",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"jobs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE JOB",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-CSRFToken",
+						"value": "t7vpSniIvmyVtYfIH0egCvHpRBLA0r6qE7hqQWmzWypNn9cGwnFmnUULSMKoCYuR",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 5BAsK78PibLjWokHfAKhxsBUy4OFs7ZYgPS25nGS",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"job_title\": \"Frontend Developer \",\r\n    \"company\": \"TCS\",\r\n    \"location\": \"Pune\",\r\n    \"description\": \"Join our fast-paced Developer team!\",\r\n    \"requirements\": \"Bachelor's degree in B-Tech..\",\r\n    \"job_type\":\"full_time\",\r\n    \"experience\":\"Mid-Senior\",\r\n    \"category\":\"Developer\",\r\n    \"skills\":\"java, python\",\r\n    \"experience_yr\":\"2-3\",\r\n    \"workplaceTypes\":\"Hybrid\",\r\n    \"questions\":\"\",\r\n    \"job_status\":\"active\"\r\n    \r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/create-company-jobs/1/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"create-company-jobs",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATED JOB DETAILS",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "X-CSRFToken",
+						"value": "xVsGjj597LYxN2M64AtrwQ8S4fcYlJBqUCCsYcmmIUoHSMZtwB24bESgT0SvspjN",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer QpDK8IkRoYHCP5Vk3vCNFW76dOTczHoi0ov7GQL4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"job_title\": \"Frontend Developer\",\r\n    \"company\": \"BharatTech\",\r\n    \"location\": \"Pune\",\r\n    \"description\": \"Join our fast-paced Developer team!\",\r\n    \"requirements\": \"Bachelor's degree in B-Tech..\",\r\n    \"job_type\":\"full_time\",\r\n    \"experience\":\"Mid-Senior\",\r\n    \"category\":\"Developer\",\r\n    \"skills\":\"html, css\",\r\n    \"experience_yr\":\"2-3\",\r\n    \"workplaceTypes\":\"Hybrid\",\r\n    \"job_status\":\"active\"\r\n    \r\n    \r\n\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/jobs/2/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"jobs",
+						"2",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE JOB DETAILS",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "X-CSRFToken",
+						"value": "UuZPQAH6UUHgVuELWh9KUySRMRTpPYpWhb9BvtYjv37q0eR8oiInzmCfBCzWWE7j",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer QpDK8IkRoYHCP5Vk3vCNFW76dOTczHoi0ov7GQL4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/jobs/3/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"jobs",
+						"3",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET JOB BY TITLE",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "4cece249e648bc0c04764c29b26af6ac396c7514",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer QpDK8IkRoYHCP5Vk3vCNFW76dOTczHoi0ov7GQL4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/jobs/?job_title=Frontend Developer",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"jobs",
+						""
+					],
+					"query": [
+						{
+							"key": "job_title",
+							"value": "Frontend Developer"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GETTING COMPANY DETAILS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer alI0cKwmZzfTTOiX7RPZ4em7C4I7AJTsTPWjA8II",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/jobs-by-company/2/?name=TCS&sort_order=latest&job_status=active",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"jobs-by-company",
+						"2",
+						""
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "TCS"
+						},
+						{
+							"key": "sort_order",
+							"value": "latest"
+						},
+						{
+							"key": "job_status",
+							"value": "active"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SEARCH JOBS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer QpDK8IkRoYHCP5Vk3vCNFW76dOTczHoi0ov7GQL4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/jobs/?search=Frontend Developer",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"jobs",
+						""
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "Frontend Developer"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FETCH COMPANY JOB APPLICATIONS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer sPrevhrozypH68QLdfwSEiDFSkxXHqy67OSpyfYu",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/company-job-applications/2/7034115915248945/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"company-job-applications",
+						"2",
+						"7034115915248945",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FETCH COLLEGE JOB APPLICATIONS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer RPwfOQmO0HUG968YzzAvtDYujpzXuZXrmSEJGNUZ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/college-job-applications/2/3/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"college-job-applications",
+						"2",
+						"3",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "JOB STATUS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer QpDK8IkRoYHCP5Vk3vCNFW76dOTczHoi0ov7GQL4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/job-status/1/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"job-status",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FIND STATUS",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer QpDK8IkRoYHCP5Vk3vCNFW76dOTczHoi0ov7GQL4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:8000/find_status?name=Wipro",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"find_status"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Wipro"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SELECTED CANDIDATES FROM COMPANY",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 5BAsK78PibLjWokHfAKhxsBUy4OFs7ZYgPS25nGS",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/company_status/selected/1/?name=TCS",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"company_status",
+						"selected",
+						"1",
+						""
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "TCS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "REJECTED CANDIDATES FROM COMPANY",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 5BAsK78PibLjWokHfAKhxsBUy4OFs7ZYgPS25nGS",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/company_status/rejected/1/?name=TCS",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"company_status",
+						"rejected",
+						"1",
+						""
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "TCS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NOT ELEGIBLE CANDIDATES FROM COMPANY",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer alI0cKwmZzfTTOiX7RPZ4em7C4I7AJTsTPWjA8II",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/company_status/not_eligible/2/?name=TCS",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"company_status",
+						"not_eligible",
+						"2",
+						""
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "TCS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UNDER REVIEW CANDIDATES FROM COMPANY",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer alI0cKwmZzfTTOiX7RPZ4em7C4I7AJTsTPWjA8II",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/company_status/under_review/2/?name=TCS",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"company_status",
+						"under_review",
+						"2",
+						""
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "TCS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "COUNT JOBS BY CATEGORY",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer QpDK8IkRoYHCP5Vk3vCNFW76dOTczHoi0ov7GQL4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/category_with_count",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"category_with_count"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FETCH JOBS BY EXP AND SKILLS",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer QpDK8IkRoYHCP5Vk3vCNFW76dOTczHoi0ov7GQL4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"experience\": \"Mid-Senior\",\r\n    \"skills\": [\"java\",\"python\",\"design tools\"],\r\n    \"choices\": {\r\n       \"experience\":{\r\n         \"Fresher\": \"Fresher\",\r\n        \"Intermediate\": \"Intermediate\",\r\n        \"Mid-Senior\": \"Mid-Senior\",\r\n        \"Associate\": \"Associate\",\r\n        \"Internship\": \"Internship\",\r\n        \"Expert\": \"Expert\"\r\n       }\r\n   \r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/fetch_jobs/?experience=Mid-Senior&skills=java,html",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"fetch_jobs",
+						""
+					],
+					"query": [
+						{
+							"key": "experience",
+							"value": "Mid-Senior"
+						},
+						{
+							"key": "skills",
+							"value": "java,html"
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FETCH JOBS BY CATEGORY LOCATION AND SKILLS",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer QpDK8IkRoYHCP5Vk3vCNFW76dOTczHoi0ov7GQL4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"category\":\"Developer\",\r\n    \"location\":\"Pune\",\r\n    \"skills\": [],\r\n    \"choices\":{\r\n        \"category\":{\r\n        \"Developer\": \"Developer\",\r\n        \"Coder\": \"Coder\",\r\n        \"Finance\": \"Finance\",\r\n        \"Accounting\": \"Accounting\",\r\n        \"Artist\": \"Artist\",\r\n        \"Marketing\": \"Marketing\",\r\n        \"UI/UX\": \"UI/UX\",\r\n        \"Engineer\": \"Engineer\",\r\n        \"Product\": \"Product\",\r\n        \"Content Writer\": \"Content Writer\"\r\n        },\r\n        \"location\":{\r\n        \"Banglore\": \"Banglore\",\r\n        \"Delhi\": \"Delhi\",\r\n        \"Hyderabad\": \"Hyderabad\",\r\n        \"Jaipur\": \"Jaipur\",\r\n        \"Lucknow\": \"Lucknow\",\r\n        \"Mumbai\": \"Mumbai\",\r\n        \"Pune\": \"Pune\"\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/fetch_jobs_category/?category=Developer&location=Pune&skills=java,css",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"fetch_jobs_category",
+						""
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "Developer"
+						},
+						{
+							"key": "location",
+							"value": "Pune"
+						},
+						{
+							"key": "skills",
+							"value": "java,css"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "COMPANY STATS COUNT",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 5BAsK78PibLjWokHfAKhxsBUy4OFs7ZYgPS25nGS",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/company-status-counts/1/?company_name=TCS",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"company-status-counts",
+						"1",
+						""
+					],
+					"query": [
+						{
+							"key": "company_name",
+							"value": "TCS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SEARCH CONTACTS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 5BAsK78PibLjWokHfAKhxsBUy4OFs7ZYgPS25nGS",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/search-contacts?q=m&sender_email=tcs10@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"search-contacts"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "m"
+						},
+						{
+							"key": "sender_email",
+							"value": "tcs10@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SEND MESSAGE",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 4fJplYbCIwNaigdkKpCMQtJkxLglkV1kkz01fWQO",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "sender_email",
+							"value": "prateeksharma1885@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "recipient_email",
+							"value": "17prateek12@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "hii 17prateek12, how u have been",
+							"type": "text"
+						},
+						{
+							"key": "attachments",
+							"type": "file",
+							"src": "/C:/Users/HP/Downloads/tests.py"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/send-message/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"send-message",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET MESSAGE",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 4fJplYbCIwNaigdkKpCMQtJkxLglkV1kkz01fWQO",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/get-messages/?sender_email=prateeksharma1885@gmail.com&recipient_email=17prateek12@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"get-messages",
+						""
+					],
+					"query": [
+						{
+							"key": "sender_email",
+							"value": "prateeksharma1885@gmail.com"
+						},
+						{
+							"key": "recipient_email",
+							"value": "17prateek12@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "INBOX",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 5BAsK78PibLjWokHfAKhxsBUy4OFs7ZYgPS25nGS",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/inbox/?email=tcs10@gmail.com&filter=all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"inbox",
+						""
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "tcs10@gmail.com"
+						},
+						{
+							"key": "filter",
+							"value": "all"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE SCREENING QUESTIONS FOR COMPANY",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer alI0cKwmZzfTTOiX7RPZ4em7C4I7AJTsTPWjA8II",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"job_id\": 13009,\r\n    \"questions_and_answers\": [\r\n        {\r\n            \"question\": \"How many years of work experience do you have with Human Resources (HR)?\",\r\n            \"correct_answer\": \"3\"\r\n        },\r\n        {\r\n            \"question\": \"How many years of work experience do you have with Communication?\",\r\n            \"correct_answer\": \"2\"\r\n        },\r\n        {\r\n            \"question\": \"How many years of work experience do you have with Organization Skills?\",\r\n            \"correct_answer\": \"2\"\r\n        }\r\n    ]\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/save-questions-answers-company/2/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"save-questions-answers-company",
+						"2",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SUBMIT SCREENIG ANSWERS FOR COMPANY",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer alI0cKwmZzfTTOiX7RPZ4em7C4I7AJTsTPWjA8II",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"rohanmore12@gmail.com\",\r\n    \"skills\": [\"Python\", \"Java\"],\r\n    \"answers\": [\r\n        {\r\n            \"question_id\": 1,\r\n            \"answer\": \"3\"\r\n        },\r\n        {\r\n            \"question_id\": 2,\r\n            \"answer\": \"2\"\r\n        },\r\n        {\r\n            \"question_id\": 3,\r\n            \"answer\": \"2\"\r\n        }\r\n    ],\r\n    \"must_have_qualification\": false\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/submit-screening-answers-company/13009/2/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"submit-screening-answers-company",
+						"13009",
+						"2",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SCHEDULE PLATFORM INTERVIEW",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer alI0cKwmZzfTTOiX7RPZ4em7C4I7AJTsTPWjA8II",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"action\": \"out collegecue platform\",\r\n    \"applicant_id\": 9,\r\n    \"round\":\"HR Round \",\r\n    \"interview_date\": \"2024-10-19T16:30:00Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/schedule-interview/2/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"schedule-interview",
+						"2",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPCOMING INTERVIEWS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer alI0cKwmZzfTTOiX7RPZ4em7C4I7AJTsTPWjA8II",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/upcoming/2/?company_name=TCS",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"upcoming",
+						"2",
+						""
+					],
+					"query": [
+						{
+							"key": "company_name",
+							"value": "TCS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PAST INTERVIEWS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer alI0cKwmZzfTTOiX7RPZ4em7C4I7AJTsTPWjA8II",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/past/2/?company_name=TCS",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"past",
+						"2",
+						""
+					],
+					"query": [
+						{
+							"key": "company_name",
+							"value": "TCS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FETCH COMPANY APPLICANTS COUNT",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer sPrevhrozypH68QLdfwSEiDFSkxXHqy67OSpyfYu",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/fetch-applicants/2/?job_title=Frontend Developer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"fetch-applicants",
+						"2",
+						""
+					],
+					"query": [
+						{
+							"key": "company_name",
+							"value": "Wipro",
+							"disabled": true
+						},
+						{
+							"key": "job_title",
+							"value": "Frontend Developer"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FETCH COLLEGE APPLICANTS COUNT",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer RPwfOQmO0HUG968YzzAvtDYujpzXuZXrmSEJGNUZ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/fetch-college-applicants/2/?job_title=Fullstack Developer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"fetch-college-applicants",
+						"2",
+						""
+					],
+					"query": [
+						{
+							"key": "company_name",
+							"value": "Wipro",
+							"disabled": true
+						},
+						{
+							"key": "job_title",
+							"value": "Fullstack Developer"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LIST OF COLLEGES",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/fetch-colleges/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"fetch-colleges",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE COLLEGE",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer RPwfOQmO0HUG968YzzAvtDYujpzXuZXrmSEJGNUZ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "college_name",
+							"value": "MIT",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "mit@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "website",
+							"value": "https://example.com",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "9876543212",
+							"type": "text"
+						},
+						{
+							"key": "founded_date",
+							"value": "2012-03-12",
+							"type": "text"
+						},
+						{
+							"key": "university_type ",
+							"value": "Autonomous",
+							"type": "text"
+						},
+						{
+							"key": "about_college",
+							"value": "Sanjay Ghodawat Institute Atigre\", Kolhapur is established in the year 2012. It is the growing institute imparting technical knowledge and skills to the students and society at large. It is an unaided Institute located in Western region of Maharashtra.",
+							"type": "text"
+						},
+						{
+							"key": "website_urls",
+							"value": "https://example1.com, https://example2.com, https://example3.com",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "Atigre",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "Kolhapur",
+							"type": "text"
+						},
+						{
+							"key": "state",
+							"value": "Maharashtra",
+							"type": "text"
+						},
+						{
+							"key": "country",
+							"value": "India",
+							"type": "text"
+						},
+						{
+							"key": "zipcode",
+							"value": "416211",
+							"type": "text"
+						},
+						{
+							"key": "Attachment",
+							"type": "file",
+							"src": "/C:/Users/HP/Downloads/models.py"
+						},
+						{
+							"key": "is_deleted",
+							"value": "false",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/colleges/2/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"colleges",
+						"2",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "COLLEGE JOB LIST",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/fetch-clg-jobs/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"fetch-clg-jobs",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE JOB FOR COLLEGE",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer RPwfOQmO0HUG968YzzAvtDYujpzXuZXrmSEJGNUZ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"job_title\": \"Software Tester\",\r\n    \"college\": \"2\",\r\n    \"location\": \"Pune\",\r\n    \"description\": \"Join our fast-paced Developer team!\",\r\n    \"requirements\": \"Bachelor's degree in B-Tech..\",\r\n    \"job_type\":\"full_time\",\r\n    \"experience\":\"Mid-Senior\",\r\n    \"category\":\"Developer\",\r\n    \"skills\":\"html, python\",\r\n    \"experience_yr\":\"2-3\",\r\n    \"workplaceTypes\":\"Hybrid\",\r\n    \"questions\":\"\",\r\n    \"job_status\":\"active\"\r\n    \r\n\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/college-create-job/2/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"college-create-job",
+						"2",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SELECTED CANDIDATES FROM COLLEGE",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 29NjwMDkcja2WncZVwuLS06qsg4FkTahC5YXOCKE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/college_status/selected/2/?college_id=2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"college_status",
+						"selected",
+						"2",
+						""
+					],
+					"query": [
+						{
+							"key": "college_id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "REJECTED CANDIDATES FROM COLLEGE",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 29NjwMDkcja2WncZVwuLS06qsg4FkTahC5YXOCKE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/college_status/rejected/2/?college_id=2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"college_status",
+						"rejected",
+						"2",
+						""
+					],
+					"query": [
+						{
+							"key": "college_id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NOT ELEGIBLE CANDIDATES FROM COLLEGE",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 29NjwMDkcja2WncZVwuLS06qsg4FkTahC5YXOCKE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/college_status/not_eligible/2/?college_id=2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"college_status",
+						"not_eligible",
+						"2",
+						""
+					],
+					"query": [
+						{
+							"key": "college_id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UNDER REVIEW CANDIDATES FROM COLLEGE",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 29NjwMDkcja2WncZVwuLS06qsg4FkTahC5YXOCKE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/college_status/under_review/2/?college_id=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"college_status",
+						"under_review",
+						"2",
+						""
+					],
+					"query": [
+						{
+							"key": "college_id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE SCREENING QUESTIONS FOR COLLEGE",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer GmxDdOxLfkx4ouerp1Q8YujWBfP7eGc7XLSdcyeN",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"job_id\": 1,\r\n    \"questions_and_answers\": [\r\n        {\r\n            \"question\": \"How many years of work experience do you have with Human Resources (HR)?\",\r\n            \"correct_answer\": \"3\"\r\n        },\r\n        {\r\n            \"question\": \"How many years of work experience do you have with Communication?\",\r\n            \"correct_answer\": \"2\"\r\n        },\r\n        {\r\n            \"question\": \"How many years of work experience do you have with Organization Skills?\",\r\n            \"correct_answer\": \"2\"\r\n        }\r\n    ]\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/save-questions-answers-college/1/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"save-questions-answers-college",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SUBMIT SCREENIG ANSWERS FOR COLLEGE",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer GmxDdOxLfkx4ouerp1Q8YujWBfP7eGc7XLSdcyeN",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"maheshpatil1010@gmail.com\",\r\n    \"skills\": [\"Python\", \"Java\"],\r\n    \"answers\": [\r\n        {\r\n            \"question_id\": 1,\r\n            \"answer\": \"3\"\r\n        },\r\n        {\r\n            \"question_id\": 2,\r\n            \"answer\": \"2\"\r\n        },\r\n        {\r\n            \"question_id\": 3,\r\n            \"answer\": \"1\"\r\n        }\r\n    ],\r\n    \"must_have_qualification\": false\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/submit-screening-answers-college/1/1/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"submit-screening-answers-college",
+						"1",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "VISITOR REGISTRATION",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer RPwfOQmO0HUG968YzzAvtDYujpzXuZXrmSEJGNUZ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"first_name\":\"Amol\",\r\n   \"last_name\":\"Patil\",\r\n   \"email\":\"amolpatil77@gmail.com\",\r\n   \"mobile_number\":\"7685432111\",\r\n   \"password\":\"amol@13\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/register-visitor/2/2/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"register-visitor",
+						"2",
+						"2",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "VISITOR LOGIN",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 29NjwMDkcja2WncZVwuLS06qsg4FkTahC5YXOCKE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \r\n   \"email\":\"amolpatil77@gmail.com\",\r\n   \"password\":\"amol@13\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/login-visitor/2/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"login-visitor",
+						"2",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SUBMIT COLLEGE ENQUIRY",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer Bjv6eogXZe4Qf521O36yjiZCR1UknuQdCpMScgXK",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"first_name\":\"vivek\",\r\n   \"last_name\":\"patil\",\r\n   \"email\":\"vivekpatil10@gmail.com\",\r\n   \"mobile_number\":\"7350188199\",\r\n   \"course\": \"B-Tech in CSE\",\r\n   \"status\":\"pending\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/student-enquiries-for-college/1/1/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"student-enquiries-for-college",
+						"1",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FETCH COLLEGE ENQUIRIES",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer Bjv6eogXZe4Qf521O36yjiZCR1UknuQdCpMScgXK",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/fetch-student-enquiries/1/1/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"fetch-student-enquiries",
+						"1",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FETCH COLLEGE JOBS ",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer Bjv6eogXZe4Qf521O36yjiZCR1UknuQdCpMScgXK",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/fetch-college-jobs/1/1/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"fetch-college-jobs",
+						"1",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "COLLEGE STATUS COUNTS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer RPwfOQmO0HUG968YzzAvtDYujpzXuZXrmSEJGNUZ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/college_status_counts/2/?college_id=2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"college_status_counts",
+						"2",
+						""
+					],
+					"query": [
+						{
+							"key": "college_id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GETTING COLLEGE DETAILS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 29NjwMDkcja2WncZVwuLS06qsg4FkTahC5YXOCKE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/jobs-by-college/2/?college_id=2&sort_order=latest&job_status=active",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"jobs-by-college",
+						"2",
+						""
+					],
+					"query": [
+						{
+							"key": "college_id",
+							"value": "2"
+						},
+						{
+							"key": "sort_order",
+							"value": "latest"
+						},
+						{
+							"key": "job_status",
+							"value": "active"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CSRF TOKEN",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/get-csrf-token/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"get-csrf-token",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SEARCH COLLEGE CONTACTS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer Bjv6eogXZe4Qf521O36yjiZCR1UknuQdCpMScgXK",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/search-clg-contacts?q=m&sender_email=sgi@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"search-clg-contacts"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "m"
+						},
+						{
+							"key": "sender_email",
+							"value": "sgi@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SEND COLLEGE MESSAGE",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer Bjv6eogXZe4Qf521O36yjiZCR1UknuQdCpMScgXK",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "sender_email",
+							"value": "sgi@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "recipient_email",
+							"value": "pravinpatil@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "Hi jobseeker from college",
+							"type": "text"
+						},
+						{
+							"key": "attachments",
+							"type": "file",
+							"src": "/C:/Users/HP/Downloads/college  mem"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/send-message-clg/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"send-message-clg",
+						""
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET COLLEGE MESSAGE",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer Bjv6eogXZe4Qf521O36yjiZCR1UknuQdCpMScgXK",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/get-clg-messages/?sender_email=sgi@gmail.com&recipient_email=pravinpatil@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"get-clg-messages",
+						""
+					],
+					"query": [
+						{
+							"key": "sender_email",
+							"value": "sgi@gmail.com"
+						},
+						{
+							"key": "recipient_email",
+							"value": "pravinpatil@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "COLLEGE INBOX",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer Bjv6eogXZe4Qf521O36yjiZCR1UknuQdCpMScgXK",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/clg-inbox/?email=sgi@gmail.com&filter=all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"clg-inbox",
+						""
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "sgi@gmail.com"
+						},
+						{
+							"key": "filter",
+							"value": "all"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "COMPANY MEMEBERSHIP FORM",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer alI0cKwmZzfTTOiX7RPZ4em7C4I7AJTsTPWjA8II",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Keshav\",\r\n    \"email\": \"tcs@gmail.com\",\r\n    \"mobile\": \"1234567890\",\r\n    \"course_to_purchase\": \"Python Course\",\r\n    \"quantity_of_leads\": 10,\r\n    \"location_for_leads\": \"USA\",\r\n    \"intake_year\": 2024\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/company-membership/2/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"company-membership",
+						"2",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "COMPANY ADVERTISEMENT FORM",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer alI0cKwmZzfTTOiX7RPZ4em7C4I7AJTsTPWjA8II",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"KESAHV\",\r\n    \"email\": \"tcs@gmail.com\",\r\n    \"contact\": \"1234567890\",\r\n    \"advertisement_placement\": \"Website\",\r\n    \"time_duration\": \"1 Month\",\r\n    \"investment_cost\": 1500.00,\r\n    \"target_audience\": \"Youth, Ages 18-25\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/company-advertisement/2/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"company-advertisement",
+						"2",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "COLLEGE MEMBERSHIP",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 0SqfSSkmJsBYHhMcLPJBcsojmX1UbWqwhyvK4tkS",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Keshav\",\r\n    \"email\": \"sgicollege10@gmail.com\",\r\n    \"mobile\": \"1234567890\",\r\n    \"course_to_purchase\": \"Python Course\",\r\n    \"quantity_of_leads\": 10,\r\n    \"location_for_leads\": \"USA\",\r\n    \"intake_year\": 2024\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/college-membership/2/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"college-membership",
+						"2",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "COLLEGE ADVISEMENT",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer QaNdWnrnWrEUG6VarR30fhPVF9XveB57YZnf6wJ5",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"KESAHV\",\r\n    \"email\": \"mitcollege10@gmail.com\",\r\n    \"contact\": \"1234567890\",\r\n    \"advertisement_placement\": \"Website\",\r\n    \"time_duration\": \"1 Month\",\r\n    \"investment_cost\": 1500.00,\r\n    \"target_audience\": \"Youth, Ages 18-25\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/college-advertisement/1/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"college-advertisement",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POSTED JOBS SUMMARY",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer sPrevhrozypH68QLdfwSEiDFSkxXHqy67OSpyfYu",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/job-application-summary/2/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"job-application-summary",
+						"2",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FETCHING APPLIED CANDIDATES",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer sPrevhrozypH68QLdfwSEiDFSkxXHqy67OSpyfYu",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/get-application-details/2/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"get-application-details",
+						"2",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE COMPANY APPLICATION STATUS",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 5BAsK78PibLjWokHfAKhxsBUy4OFs7ZYgPS25nGS",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"application_status\":\"selected\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/update-company-application-status/1/17/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"update-company-application-status",
+						"1",
+						"17",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE COLLEGE APPLICATION STATUS",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer RPwfOQmO0HUG968YzzAvtDYujpzXuZXrmSEJGNUZ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"application_status\":\"rejected\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/update-college-application-status/2/12/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"update-college-application-status",
+						"2",
+						"12",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "college-job-applications",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
