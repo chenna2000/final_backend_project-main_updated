@@ -1415,6 +1415,81 @@ def create_job_alert(request):
     return JsonResponse({'error': 'Invalid request method'}, status=405)
 
 
+# @csrf_exempt
+# def company_status_counts(request, company_in_charge_id):
+#     if request.method != 'GET':
+#         return JsonResponse({'error': 'Invalid request method, only GET allowed'}, status=405)
+
+#     auth_header = request.headers.get('Authorization')
+#     if not auth_header or not auth_header.startswith('Bearer '):
+#         return JsonResponse({'error': 'Token is missing or invalid format'}, status=400)
+
+#     token = auth_header.split(' ')[1]
+
+#     try:
+#         company_in_charge = CompanyInCharge.objects.get(id=company_in_charge_id, token=token)
+
+#         # company_name = request.GET.get('company_name')
+#         # if not company_name:
+#         #     return JsonResponse({'error': 'Company name is required'}, status=400)
+
+#         # company = Company.objects.get(name=company_name, company_in_charge=company_in_charge)
+
+#         total_applications = Application.objects.filter(company_in_charge=company_in_charge).count()
+#         # shortlisted_count = Application.objects.filter(company_in_charge=company_in_charge, status='selected').count()
+#         shortlisted_count = Application.objects.filter(company_in_charge=company_in_charge,status__in=['selected', 'shortlisted']).count()
+#         rejected_count = Application.objects.filter(company_in_charge=company_in_charge, status='rejected').count()
+#         jobs_posted = Job.objects.filter(company_in_charge=company_in_charge).count()
+
+#         jobs_by_month = (
+#             Job.objects.filter(company_in_charge=company_in_charge)
+#             .annotate(month=TruncMonth('published_at'))
+#             .values('month')
+#             .annotate(count=Count('id'))
+#             .order_by('month')
+#         )
+#         applications_by_month = (
+#             Application.objects.filter(company_in_charge=company_in_charge)
+#             .annotate(month=TruncMonth('applied_at'))
+#             .values('month')
+#             .annotate(count=Count('id'))
+#             .order_by('month')
+#         )
+#         shortlisted_by_month = (
+#             Application.objects.filter(company_in_charge=company_in_charge,status__in=['selected', 'shortlisted'])
+#             .annotate(month=TruncMonth('applied_at'))
+#             .values('month')
+#             .annotate(count=Count('id'))
+#             .order_by('month')
+#         )
+
+#         rejected_by_month = (
+#             Application.objects.filter(company_in_charge=company_in_charge, status='rejected')
+#             .annotate(month=TruncMonth('applied_at'))
+#             .values('month')
+#             .annotate(count=Count('id'))
+#             .order_by('month')
+#         )
+#         response_data = {
+#             'total_applications': total_applications,
+#             'shortlisted_count': shortlisted_count,
+#             'rejected_count': rejected_count,
+#             'jobs_posted': jobs_posted,
+#             'jobs_by_month': {job['month'].strftime('%Y-%m'): job['count'] for job in jobs_by_month},
+#             'applications_by_month': {app['month'].strftime('%Y-%m'): app['count'] for app in applications_by_month},
+#             'shortlisted_by_month': {app['month'].strftime('%Y-%m'): app['count'] for app in shortlisted_by_month},
+#             'rejected_by_month': {app['month'].strftime('%Y-%m'): app['count'] for app in rejected_by_month}
+#         }
+
+#         return JsonResponse(response_data)
+
+#     except CompanyInCharge.DoesNotExist:
+#         return JsonResponse({'error': 'Invalid token or company in charge not found'}, status=404)
+#     except Company.DoesNotExist:
+#         return JsonResponse({'error': 'Company not found'}, status=404)
+#     except Exception as e:
+#         return JsonResponse({'error': str(e)}, status=500)
+
 @csrf_exempt
 def company_status_counts(request, company_in_charge_id):
     if request.method != 'GET':
@@ -1429,14 +1504,7 @@ def company_status_counts(request, company_in_charge_id):
     try:
         company_in_charge = CompanyInCharge.objects.get(id=company_in_charge_id, token=token)
 
-        # company_name = request.GET.get('company_name')
-        # if not company_name:
-        #     return JsonResponse({'error': 'Company name is required'}, status=400)
-
-        # company = Company.objects.get(name=company_name, company_in_charge=company_in_charge)
-
         total_applications = Application.objects.filter(company_in_charge=company_in_charge).count()
-        # shortlisted_count = Application.objects.filter(company_in_charge=company_in_charge, status='selected').count()
         shortlisted_count = Application.objects.filter(company_in_charge=company_in_charge,status__in=['selected', 'shortlisted']).count()
         rejected_count = Application.objects.filter(company_in_charge=company_in_charge, status='rejected').count()
         jobs_posted = Job.objects.filter(company_in_charge=company_in_charge).count()
@@ -1470,15 +1538,18 @@ def company_status_counts(request, company_in_charge_id):
             .annotate(count=Count('id'))
             .order_by('month')
         )
+        
+        current_month = datetime.now().strftime('%Y-%m')
+
         response_data = {
             'total_applications': total_applications,
             'shortlisted_count': shortlisted_count,
             'rejected_count': rejected_count,
             'jobs_posted': jobs_posted,
-            'jobs_by_month': {job['month'].strftime('%Y-%m'): job['count'] for job in jobs_by_month},
-            'applications_by_month': {app['month'].strftime('%Y-%m'): app['count'] for app in applications_by_month},
-            'shortlisted_by_month': {app['month'].strftime('%Y-%m'): app['count'] for app in shortlisted_by_month},
-            'rejected_by_month': {app['month'].strftime('%Y-%m'): app['count'] for app in rejected_by_month}
+            'jobs_by_month': {job['month'].strftime('%Y-%m'): job['count'] for job in jobs_by_month} if jobs_by_month else {current_month: 0},
+            'applications_by_month': {app['month'].strftime('%Y-%m'): app['count'] for app in applications_by_month} if applications_by_month else {current_month: 0},
+            'shortlisted_by_month': {app['month'].strftime('%Y-%m'): app['count'] for app in shortlisted_by_month} if shortlisted_by_month else {current_month: 0},
+            'rejected_by_month': {app['month'].strftime('%Y-%m'): app['count'] for app in rejected_by_month} if rejected_by_month else {current_month: 0}
         }
 
         return JsonResponse(response_data)

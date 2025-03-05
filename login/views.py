@@ -2594,143 +2594,6 @@ def submit_admission_review(request):
     except json.JSONDecodeError:
         return JsonResponse({"error": "Invalid JSON format"}, status=400)
 
-# @method_decorator(csrf_exempt, name='dispatch')
-# class RegisterUniversityInChargeView(View):
-#     def post(self, request):
-#         try:
-#             data = json.loads(request.body.decode('utf-8'))
-#         except json.JSONDecodeError:
-#             return JsonResponse({'success': False, 'errors': 'Invalid JSON'}, status=400)
-
-#         university_name = data.get('university_name', '').strip()
-#         if not university_name:
-#             return JsonResponse({'success': False, 'errors': 'University name is required'}, status=400)
-
-#         formatted_university_name = re.sub(r'\(.*?\)|\[.*?\]', '', university_name).strip()
-#         formatted_university_name = re.sub(r'[^a-zA-Z0-9]', '', formatted_university_name).lower()
-#         print("Formated university name ==> ", formatted_university_name)
-
-#         data['trimmed_university_name'] = formatted_university_name
-
-#         form = UniversityInChargeForm(data)
-#         if form.is_valid():
-#             university = form.save(commit=False)
-#             university.password = make_password(university.password)
-#             university.trimmed_university_name = formatted_university_name
-#             university.save()
-#             send_data_to_google_sheet3(
-#                 university.university_name,
-#                 university.official_email,
-#                 university.country_code,
-#                 university.mobile_number,
-#                 university.password,
-#                 university.linkedin_profile,
-#                 university.college_person_name,
-#                 university.agreed_to_terms,
-#                 "Sheet3"
-#             )
-
-#             sender_email = settings.EMAIL_HOST_USER
-#             recipient_email = [university.official_email]
-#             subject = 'Confirmation Mail'
-#             message = '''Dear User,
-
-#             Thank you for your registration.
-
-#             If you have any questions or need further assistance, please don't hesitate to contact our support team.
-
-#             Best regards,
-#             Collegecue
-#             Support Team
-#             '''
-#             email = EmailMessage(subject, message, sender_email, recipient_email)
-#             email.send()
-#             return JsonResponse({'success': True, 'message': 'Registration successful'})
-#         else:
-#             errors = dict(form.errors.items())
-#             return JsonResponse({'success': False, 'errors': errors}, status=400)
-
-
-# @method_decorator(csrf_exempt, name='dispatch')
-# class RegisterUniversityInChargeView(View):
-#     def post(self, request):
-#         try:
-#             data = json.loads(request.body.decode('utf-8'))
-#         except json.JSONDecodeError:
-#             return JsonResponse({'success': False, 'errors': 'Invalid JSON'}, status=400)
-
-#         university_name = data.get('university_name', '').strip()
-#         if not university_name:
-#             return JsonResponse({'success': False, 'errors': 'University name is required'}, status=400)
-
-#         EXTERNAL_API_URL = f"http://195.35.22.140:1337/api/college-infos/?filters[College_Name][$contains]={university_name}"
-
-#         try:
-#             response = requests.get(EXTERNAL_API_URL)
-#             response.raise_for_status()
-#             colleges_data = response.json()
-#             print("Colleges Data : ", colleges_data)
-#         except requests.RequestException as e:
-#             return JsonResponse({'success': False, 'errors': f'Failed to fetch colleges data: {str(e)}'}, status=500)
-
-#         college_list = colleges_data.get("data", [])
-
-#         matched_college = next(
-#             (college for college in college_list if college.get("attributes", {}).get("College_Name", "").strip().lower() == university_name.lower()), 
-#             None
-#         )
-
-#         if matched_college:
-#             formatted_university_name = re.sub(r'\(.*?\)|\[.*?\]', '', university_name).strip()
-#             formatted_university_name = re.sub(r'[^a-zA-Z0-9]', '', formatted_university_name).lower()
-#             data['trimmed_university_name'] = formatted_university_name
-
-#             form = UniversityInChargeForm(data)
-#             if form.is_valid():
-#                 university = form.save(commit=False)
-#                 university.password = make_password(university.password)
-#                 university.trimmed_university_name = formatted_university_name
-#                 university.save()
-
-#                 sender_email = settings.EMAIL_HOST_USER
-#                 recipient_email = [university.official_email]
-#                 subject = 'Confirmation Mail'
-#                 message = '''Dear User,
-
-#                 Thank you for your registration.
-
-#                 If you have any questions or need further assistance, please don't hesitate to contact our support team.
-
-#                 Best regards,
-#                 Collegecue
-#                 Support Team
-#                 '''
-#                 email = EmailMessage(subject, message, sender_email, recipient_email)
-#                 email.send()
-
-#                 return JsonResponse({'success': True, 'message': 'Registration successful'})
-#             else:
-#                 return JsonResponse({'success': False, 'errors': dict(form.errors.items())}, status=400)
-
-#         unregistered_college_data = {
-#             'university_name': university_name,
-#             'official_email': data.get('official_email', ''), 
-#             'country_code': data.get('country_code', ''), 
-#             'mobile_number': data.get('mobile_number', ''),  
-#             'password': make_password(data.get('password', 'defaultpassword')),
-#             'linkedin_profile': data.get('linkedin_profile', ''), 
-#             'college_person_name': data.get('college_person_name', ''), 
-#             'agreed_to_terms': data.get('agreed_to_terms', False)
-#         }
-
-#         unregister_college_form = UnregisteredCollegesForm(unregistered_college_data)
-
-#         if unregister_college_form.is_valid():
-#             unregister_college_form.save()
-#             return JsonResponse({'success': False, 'message': 'University not found, saved for future reference'}, status=404)
-#         else:
-#             return JsonResponse({'success': False, 'errors': unregister_college_form.errors}, status=400)
-
 @method_decorator(csrf_exempt, name='dispatch')
 class RegisterUniversityInChargeView(View):
     def post(self, request):
@@ -2739,15 +2602,15 @@ class RegisterUniversityInChargeView(View):
             print("Data => ", data)
         except json.JSONDecodeError:
             return JsonResponse({'success': False, 'errors': 'Invalid JSON'}, status=400)
-        
-        id = data.get('university_id')
-        print("College Id => ", id)
+
+        college_id = data.get('university_id')
+        print("College Id => ", college_id)
 
         university_form = UniversityInChargeForm(data)
         if university_form.is_valid():
             university = university_form.save(commit=False)
             university.password = make_password(university.password)
-            university.clg_id = id
+            university.clg_id = college_id
             university.save()
 
             send_data_to_google_sheet3(
@@ -2778,17 +2641,17 @@ class RegisterUniversityInChargeView(View):
             '''
             email = EmailMessage(subject, message, sender_email, recipient_email)
             email.send()
-             
+
             college = None
 
-            if not id or id == 'None':
+            if not college_id or college_id == 'None':
                 unregistered_form = UnregisteredCollegesForm(data)
                 if unregistered_form.is_valid():
                     college = unregistered_form.save(commit=False)
                     college.password = make_password(college.password)
                     college.save()
-            
-            if college:        
+
+            if college:
                 send_data_to_google_sheet6(
                    college.university_name,
                    college.official_email,
@@ -2806,6 +2669,3 @@ class RegisterUniversityInChargeView(View):
         else:
             errors = dict(university_form.errors.items())
             return JsonResponse({'success': False, 'errors': errors}, status=400)
-
-
-
