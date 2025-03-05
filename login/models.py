@@ -187,7 +187,7 @@ class AdmissionReview1(models.Model):
     class_size = models.IntegerField()
     opted_hostel = models.BooleanField()
     college_provides_placements = models.BooleanField()
-    hostel_fees = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True)
+    hostel_fees = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True, default=0.00)
     average_package = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True)
     admission_process = models.TextField()
     course_curriculum_faculty = models.TextField()
