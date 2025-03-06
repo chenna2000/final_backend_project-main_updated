@@ -57,9 +57,7 @@ urlpatterns = [
     path('submit-answer/<int:question_id>/', views.submit_answer, name='submit-answer'),
     path("submit-review/", views.submit_admission_review, name="submit-review"),
 
-
     #path('verify-token/', views.verify_token, name='verify_token'),
     #path('verify-linkedin/', views.verify_linkedin_token, name='verify_linkedin'),
     #path('search/', views.search, name='search'),
-
 ]

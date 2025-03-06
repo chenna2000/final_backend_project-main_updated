@@ -50,20 +50,6 @@ class SubscriptionForm1(forms.ModelForm):
 
 }
 
-# class JobSeekerRegistrationForm(forms.ModelForm):
-#    class Meta:
-#       model = JobSeeker
-#       fields = ['first_name', 'last_name', 'email', 'mobile_number', 'password', 'country_code']
-#       widgets = {
-#          'password': forms.PasswordInput(),
-#     }
-
-# def clean_email(self):
-#         email = self.cleaned_data.get('email')
-#         if JobSeeker.objects.filter(email=email).exists():
-#          raise forms.ValidationError("Email already in use.")
-#         return email
-
 class JobSeekerRegistrationForm(forms.ModelForm):
    class Meta:
       model = JobSeeker
