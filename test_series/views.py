@@ -15,7 +15,6 @@ from .models import new_user
 from django.db.models import Count
 
 
-
 def api_response(success, data=None, error=None, details=None, status=200):
     try:
         response = {'success': success}
@@ -85,7 +84,6 @@ class StartProctoringSessionView(View):
         except Exception as e:
             return JsonResponse({'error': 'An error occurred', 'details': str(e)}, status=500)
 
-
 @method_decorator(csrf_exempt, name='dispatch')
 class EndProctoringSessionView(View):
     def post(self, request):
@@ -113,6 +111,7 @@ class EndProctoringSessionView(View):
 
             session.end_time = timezone.now()
             session.status = 'completed'
+            session.completed = True
             session.save()
 
             try:
@@ -137,57 +136,6 @@ class EndProctoringSessionView(View):
         except Exception as e:
             return JsonResponse({'error': 'An error occurred while ending the session', 'details': str(e)}, status=500)
 
-# @method_decorator(csrf_exempt, name='dispatch')
-# class RecordProctoringEventView(View):
-#     def post(self, request):
-#         try:
-#             auth_header = request.headers.get('Authorization', '')
-#             token = auth_header.split(' ')[1] if auth_header.startswith('Bearer ') else None
-
-#             if not token:
-#                 return JsonResponse({'error': 'Token is required'}, status=400)
-
-#             user = new_user.objects.filter(token=token).first()
-#             if not user:
-#                 return JsonResponse({'error': 'Invalid token'}, status=404)
-
-#             data = json.loads(request.body.decode('utf-8'))
-#             form = RecordProctoringEventForm(data)
-
-#             if not form.is_valid():
-#                 return JsonResponse({'error': 'Invalid data', 'errors': form.errors}, status=400)
-
-#             session = get_object_or_404(ProctoringSession, id=form.cleaned_data['session_id'], user=user)
-
-#             if ProctoringEvent.objects.filter(session=session).exists():
-#                 return JsonResponse({'error': 'Event for this session already recorded'}, status=400)
-
-#             event = form.save(commit=False)
-#             event.session = session
-#             event.save()
-
-#             try:
-#                 send_mail(
-#                     "Proctoring Event Notification",
-#                     "Event recorded",
-#                     settings.EMAIL_HOST_USER,
-#                     [user.email]
-#                 )
-#             except Exception as email_error:
-#                 return JsonResponse({
-#                     'success': True,
-#                     'data': {'status': 'event recorded'},
-#                     'error': f'Failed to send email to {user.email}',
-#                     'details': str(email_error)
-#                 }, status=500)
-
-#             return JsonResponse({'success': True, 'data': {'status': 'event recorded'}}, status=200)
-
-#         except (json.JSONDecodeError, IndexError):
-#             return JsonResponse({'error': 'Invalid JSON or token'}, status=400)
-#         except Exception as e:
-#             return JsonResponse({'error': 'An error occurred while recording the event', 'details': str(e)}, status=500)
-
 @method_decorator(csrf_exempt, name='dispatch')
 class RecordProctoringEventView(View):
     def post(self, request):
@@ -210,36 +158,38 @@ class RecordProctoringEventView(View):
 
             session = get_object_or_404(ProctoringSession, id=form.cleaned_data['session_id'], user=user)
 
-            if ProctoringEvent.objects.filter(session=session).exists():
-                return JsonResponse({'error': 'Event for this session already recorded'}, status=400)
+            if session.status == 'completed' and session.completed:
+                if ProctoringEvent.objects.filter(session=session).exists():
+                    return JsonResponse({'error': 'Event for this session already recorded'}, status=400)
 
-            event = form.save(commit=False)
-            event.session = session
-            event.user_id = user.id  # Store user_id in the database
-            event.save()
+                event = form.save(commit=False)
+                event.session = session
+                event.user_id = user.id
+                event.save()
 
-            try:
-                send_mail(
-                    "Proctoring Event Notification",
-                    "Event recorded",
-                    settings.EMAIL_HOST_USER,
-                    [user.email]
-                )
-            except Exception as email_error:
-                return JsonResponse({
-                    'success': True,
-                    'data': {'status': 'event recorded'},
-                    'error': f'Failed to send email to {user.email}',
-                    'details': str(email_error)
-                }, status=500)
+                try:
+                    send_mail(
+                        "Proctoring Event Notification",
+                        "Event recorded successfully",
+                        settings.EMAIL_HOST_USER,
+                        [user.email]
+                    )
+                except Exception as email_error:
+                    return JsonResponse({
+                        'success': True,
+                        'data': {'status': 'event recorded'},
+                        'error': f'Failed to send email to {user.email}',
+                        'details': str(email_error)
+                    }, status=500)
 
-            return JsonResponse({'success': True, 'data': {'status': 'event recorded'}}, status=200)
+                return JsonResponse({'success': True, 'data': {'status': 'event recorded'}}, status=200)
+
+            return JsonResponse({'error': 'Session is either incomplete or not started yet'}, status=400)
 
         except (json.JSONDecodeError, IndexError):
             return JsonResponse({'error': 'Invalid JSON or token'}, status=400)
         except Exception as e:
             return JsonResponse({'error': 'An error occurred while recording the event', 'details': str(e)}, status=500)
-
 
 @csrf_exempt
 @require_POST
@@ -563,88 +513,6 @@ def get_details(request):
         return JsonResponse({'error': 'Invalid JSON'}, status=400)
     except Exception as e:
         return JsonResponse({'error': 'An error occurred', 'details': str(e)}, status=500)
-
-
-# @csrf_exempt
-# @require_POST
-# def submit_all_answers(request):
-#     try:
-#         auth_header = request.headers.get('Authorization', '')
-#         token = auth_header.split(' ')[1] if auth_header.startswith('Bearer ') else None
-
-#         if not token:
-#             return JsonResponse({'error': 'Token is required'}, status=400)
-
-#         user = new_user.objects.filter(token=token).first()
-#         if not user:
-#             return JsonResponse({'error': 'Invalid token'}, status=403)
-
-#         form = SubmitAllAnswersForm(json.loads(request.body))
-#         if not form.is_valid():
-#             return JsonResponse({'success': False, 'error': 'Invalid data', 'details': form.errors}, status=400)
-
-#         session_id = form.cleaned_data['session_id']
-#         answers = form.cleaned_data['answers']
-
-#         session = get_object_or_404(ProctoringSession, id=session_id, user=user)
-
-#         if session.is_submitted:
-#             return JsonResponse({'error': 'Answers have already been submitted'}, status=400)
-
-#         user_score, _ = UserScore.objects.get_or_create(user=user, exam=session.exam)
-#         question_map = {q.question_no: q for q in session.exam.questions.only('id', 'question_no', 'correct_option')}
-#         current_time = timezone.now()
-#         score_change = 0
-#         response_updates = []
-#         answered_questions = []
-
-#         for answer in answers:
-#             question_no = answer['question_no']
-#             selected_option = answer['selected_option']
-#             question = question_map.get(question_no)
-
-#             if not question:
-#                 continue 
-
-#             response = UserResponse.objects.filter(user=user, question=question, session=session).first()
-#             if response:
-#                 if response.selected_option != question.correct_option and selected_option == question.correct_option:
-#                     score_change += 1
-#                 elif response.selected_option == question.correct_option and selected_option != question.correct_option:
-#                     score_change -= 1
-
-#                 response.selected_option = selected_option
-#                 response.response_time = current_time
-#                 response_updates.append(response)
-#             else:
-#                 UserResponse.objects.create(
-#                     user=user,
-#                     question=question,
-#                     session=session,
-#                     selected_option=selected_option,
-#                     response_time=current_time
-#                 )
-#                 if selected_option == question.correct_option:
-#                     score_change += 1
-
-#             answered_questions.append(question.id)
-
-#         if response_updates:
-#             UserResponse.objects.bulk_update(response_updates, ['selected_option', 'response_time'])
-
-#         if score_change:
-#             user_score.score += score_change
-#             user_score.save(update_fields=['score'])
-
-#         Question.objects.filter(id__in=answered_questions).update(status='Answered')
-
-#         session.is_submitted = True
-#         session.save(update_fields=['is_submitted'])
-
-#         return JsonResponse({'success': True, 'message': 'Answers submitted successfully'}, status=200)
-
-#     except Exception as e:
-#         return JsonResponse({'success': False, 'error': 'An error occurred while submitting all answers', 'details': str(e)}, status=500)
 
 @csrf_exempt
 @require_POST
