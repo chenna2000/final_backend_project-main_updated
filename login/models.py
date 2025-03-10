@@ -175,7 +175,7 @@ class AdmissionReview1(models.Model):
     email = models.EmailField()
     country_code=models.CharField(max_length=5,default='IN')
     phone_number = models.CharField(max_length=20)
-    gender = models.CharField(max_length=10, choices=[('Male', 'Male'), ('Female', 'Female'), ('Other', 'Other')])
+    gender = models.CharField(max_length=10)
     linkedin_profile = models.URLField(blank=True, null=True)
     course_fees = models.DecimalField(max_digits=10, decimal_places=2)
     year = models.IntegerField()
